@@ -8,7 +8,7 @@ int main()
   //run code
   ofstream failas;
   int pagalbinis = 1000;
-  for(int i = 1; i <= 2; i++){//is 4 i 5
+  for(int i = 1; i <= 4; i++){//is 4 i 5
     ofstream failas(to_string(i)+"_failas.txt", ios::in);
     failas.open (to_string(i)+"_failas.txt");
     for(int j = 1; j <= pagalbinis; j++){
@@ -33,7 +33,7 @@ int main()
     //duomenu nuskaitymas
     string Vard, Pav;
     int paz1, paz2, paz3, egz;
-    for(int i = 1; i <= 2; i++){
+    for(int i = 1; i <= 4; i++){
       ifstream failas(to_string(i)+"_failas.txt", ios::in);
 
     //get the end time
