@@ -1,4 +1,4 @@
-#include "class1.h"
+#include "class1_2.h"
 
 int main()
 {
