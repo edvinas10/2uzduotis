@@ -7,5 +7,7 @@ studentų galutiniais balais. Programa, bent jau čia, dirba gana sparčiau paly
 generuojančio milijoną įrasu duomenų rūšiavimo ir perkėlimo į naujus failus veikimo laikas skiriasi beveik viena sekunde. V1.2 versijoje pridedame visus taip
 vadinamus "rule of three" operatorius t.y. destruktorių, priskyrimo operatorių ir kopijavimo konstruktorių. Visa tai atliekame h faile. Jų reikšmė yra tokia, kad
 pvz destruktorius
-yra taip vadinamas šiukšlių surinkėjas, kopijavimo konstruktorius vieną objektą inicializuoja naudojant kitą, priskyrimo operatorius vieno objekto vertę priskiria
-kitam objektui.
+yra taip vadinamas šiukšlių surinkėjas - atlaisvina atmintį, kopijavimo konstruktorius vieną objektą inicializuoja naudojant kitą, priskyrimo operatorius vieno objekto vertę priskiria
+kitam objektui. V1.5 release iš vienos turimos klasės sukuriame dvi t.y. bazinę - žmogus ir išvestinę - duomuo ir dabar turime 2 klases. Bazinė klasė yra
+abstrakčioji todėl joje esantis objektas galutinis balas nėra naujai sukuriamas, o yra gaunamas iš objektų esančių išvestinėje klasėje t.y. iš egzamino ir namų
+darbų pažymių.
