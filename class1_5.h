@@ -21,24 +21,25 @@ using std::swap;
 
 class zmogus {
   public:
-  double GP=0;
+  string Vard;
+  string Pav;
 
-  public:
-  double GBal(double (*) (vector<double>)) const;  // get'eriai
-  zmogus() : GP(0) { }
+  std::string getVardas() const { return Vard; }    // get'eriai
+  std::string getPavarde() const { return Pav; }  // get'eriai
+  zmogus(std::string v = "") : Vard(v) { }
 };
 
 class duomuo : public zmogus{
   public:
-  string Vard;
-  string Pav;
   std::vector<int> paz;
   int egz;
+  double GP ;
 
-public:
-  duomuo() : egz(0) { }
-  ~duomuo(){cout<<"de";};
+  double GBal(double (*) (vector<double>)) const;  // get'eriai
   duomuo(std::istream& is);
+  duomuo() : GP(0) { }
+  std::istream& readStudent(std::istream&);  // set'eriai
+  ~duomuo(){cout<<"de";};
   
   duomuo(const duomuo &duomuo_kopijuoti) {Vard = duomuo_kopijuoti.Vard; Pav = duomuo_kopijuoti.Pav; paz = duomuo_kopijuoti.paz; egz = duomuo_kopijuoti.egz; GP=duomuo_kopijuoti.GP; }  
     duomuo& operator=(const duomuo& rhs)
@@ -50,10 +51,6 @@ public:
       GP = rhs.GP;
       return *this;
    }
-  inline std::string vardas() const { return Vard; }    // get'eriai, inline
-  inline std::string pavarde() const { return Pav; }  // get'eriai, inline
-  std::istream& readStudent(std::istream&);  // set'eriai
- 
 };
   //duomuo::~duomuo(){cout<<"del";}; 
 void rikiuoti(std::vector<int> masyvas, int n);
